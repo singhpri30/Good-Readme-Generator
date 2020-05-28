@@ -1,1 +1,1 @@
-# Good-Readme-Generator
+{"title":"sd","description":"sd","project contents":"sd","installation":"s","usage":"sd","license":"sd"}

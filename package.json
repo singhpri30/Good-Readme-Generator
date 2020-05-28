@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/singhpri30/Good-Readme-Generator/issues"
   },
-  "homepage": "https://github.com/singhpri30/Good-Readme-Generator#readme"
+  "homepage": "https://github.com/singhpri30/Good-Readme-Generator#readme",
+  "dependencies": {
+    "inquirer": "^7.1.0"
+  }
 }
