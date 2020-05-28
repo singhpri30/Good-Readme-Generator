@@ -1,0 +1,19 @@
+{
+  "name": "good-readme-generator",
+  "version": "1.0.0",
+  "description": "The purpose of this app is to create a good README generator.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/singhpri30/Good-Readme-Generator.git"
+  },
+  "author": "Priyanka Singh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/singhpri30/Good-Readme-Generator/issues"
+  },
+  "homepage": "https://github.com/singhpri30/Good-Readme-Generator#readme"
+}
