@@ -1,6 +1,6 @@
 function generateMarkdown(data) {
   return `
-  # Project Title: ***${data.Title}***
+  # Project: ***${data.Title}***
   ## Description: ${data.Description}
   ## <deatils><summary> This project has the following features:</summary>
   
