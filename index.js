@@ -1,5 +1,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
+const generateMarkDown = require("./Develop/utils/generateMarkdown.js")
+console.log(generateMarkDown);
 //const util = require("util");
 
 //const writeFileAsync = util.promisify(fs.writeFile);
@@ -8,41 +10,63 @@ const fs = require("fs");
 const questions = [
     {
         type: "input",
-        name: "title",
+        name: "Title",
         message: "What is the title of your project?"
     },
     {
         type: "input",
-        name: "description",
+        name: "Description",
         message: "What is the description of project?"
     },
     {
         type: "input",
-        name: "project contents",
+        name: "Contents", //change this
         message: "What are the project contents?"
     },
     {
         type: "input",
-        name: "installation",
-        message: "What are the steps for project installation?"
+        name: "Installation", //two steps
+        message: "What are the steps for installation?"
     },
     {
         type: "input",
-        name: "usage",
+        name: "Usage",
         message: "What is the usage of this project?"
     },
     {
+        type: "list",
+        name: "License",
+        message: "Select license from the list",
+        choices: ["MIT", "License1", "License2"],
+    },
+    {
         type: "input",
-        name: "license",
-        message: "Provide license details."
-    }
+        name: "Contributors",
+        message: "Who are the contributors?"
+    },
+    {
+        type: "input",
+        name: "Tests",
+        message: "Who are the tests?"
+    },
+    {
+        type: "input",
+        name: "Questions",
+        message: "Do you have any questions?"
+    },
 ];
 inquirer.prompt(questions).then(answers => { //answer is an object
-    console.log(answers.title);
-    writeAnswers(answers);
+    console.log(answers.Title);
+    //writeAnswers(answers);
+    let test = generateMarkDown(answers);
+    console.log(test);
+    writeAnswers(test);
+
+
+
 })
-function writeAnswers(answers) {
-    fs.writeFile("README.md", JSON.stringify(answers), (err) => {
+function writeAnswers(test) {
+    fs.writeFile("README.md", test, (err) => {
         if (err) throw err;
         console.log('The file has been saved!');
     });
