@@ -1,13 +1,15 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const generateMarkDown = require("./Develop/utils/generateMarkdown.js")
-console.log(generateMarkDown);
-//const util = require("util");
 
-//const writeFileAsync = util.promisify(fs.writeFile);
-
-
+//these questions will be prompted to the user
 const questions = [
+    {
+        type: "input",
+        name: "GitHub",
+        message: "What is your GitHub user name?"
+    },
+
     {
         type: "input",
         name: "Title",
@@ -20,12 +22,12 @@ const questions = [
     },
     {
         type: "input",
-        name: "Contents", //change this
+        name: "Contents",
         message: "What are the project contents?"
     },
     {
         type: "input",
-        name: "Installation", //two steps
+        name: "Installation",
         message: "What are the steps for installation?"
     },
     {
@@ -37,7 +39,7 @@ const questions = [
         type: "list",
         name: "License",
         message: "Select license from the list",
-        choices: ["MIT", "License1", "License2"],
+        choices: ["MIT", "APACHE2.0", "GPL3.0", "none"],
     },
     {
         type: "input",
@@ -47,26 +49,25 @@ const questions = [
     {
         type: "input",
         name: "Tests",
-        message: "Dis you run any tests?"
+        message: "Did you run any tests?"
     },
     {
         type: "input",
         name: "Questions",
-        message: "Do you have any questions?"
+        message: "For question email me:"
     },
 ];
-inquirer.prompt(questions).then(answers => { //answer is an object
-    console.log(answers.Title);
-    //writeAnswers(answers);
-    let test = generateMarkDown(answers);
-    console.log(test);
-    writeAnswers(test);
+inquirer.prompt(questions).then(answers => {
+
+    let markDownFileContent = generateMarkDown(answers); //pass all the answers to generateMarkdown function
+    writeAnswers(markDownFileContent); //call writeAnswers function to write a file
 
 
 
 })
-function writeAnswers(test) {
-    fs.writeFile("README.md", test, (err) => {
+
+function writeAnswers(markDownFileContent) { //this will write the contents into README file.
+    fs.writeFile("README.md", markDownFileContent, (err) => {
         if (err) throw err;
         console.log('The file has been saved!');
     });
@@ -76,12 +77,3 @@ function writeAnswers(test) {
 
 
 
-// function writeToFile(fileName, data) {
-    //capture all the answer and write into a file
-// }
-
-// function init() {
-
-// }
-
-// init();
