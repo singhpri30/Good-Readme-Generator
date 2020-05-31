@@ -21,20 +21,21 @@ function generateMarkdown(data) {
   ### This project has following features
   ${data.Contents}
    
- >### Installation: ${data.Installation}
+ 
+  ### Installation: ${data.Installation}
 
-  >### Usage: ${data.Usage}
+  ### Usage: ${data.Usage}
 
   ${createBadge(data.License, data.GitHub, data.Title)}
-  >### License: ${data.License}
+  ### License: ${data.License}
 
   [![GitHub contributors](https://img.shields.io/github/contributors/singhpri30/Good-Readme-Generator)](https://github.com/singhpri30/Good-Readme-Generator/graphs/contributors/) 
 
-  >### Contributors: ${data.Contributors}
+  ### Contributors: ${data.Contributors}
 
-  >### Tests: ${data.Tests}
+  ### Tests: ${data.Tests}
 
-  >### Questions: ${data.Questions}
+  ### Questions: ${data.Questions}
   
   `;
 }
