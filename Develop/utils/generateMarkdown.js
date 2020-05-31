@@ -16,7 +16,7 @@ function createBadge(license, GitHub, ProjectTitle) {
 function generateMarkdown(data) {
   return `
   # Project: ***${data.Title}***
-  ## Description: ${data.Description}
+  ### Description: ${data.Description}
 
   <details>
   <summary>This project has the following features</summary>
