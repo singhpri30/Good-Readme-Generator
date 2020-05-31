@@ -1,23 +1,24 @@
 
-  # Project: ***dsd***
-  ### Description: sd
+  # Project: ***Node Readme Generator***
+  ### Description: This is a CLI application that will dynamically generate a README.md file from user's input
 
   ### This project has following features
-  sd
+  This application has been created using node.js and javascript
    
- >### Installation: sd
+ 
+  ### Installation: npm install
 
-  >### Usage: sd
+  ### Usage: npm run
 
-  [![GitHub license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/erer/dsd)
-  >### License: MIT
+  [![GitHub license](https://img.shields.io/badge/License-APACHE2.0-blue.svg)](https://github.com/singhpri30/node-readme-generator)
+  ### License: APACHE2.0
 
   [![GitHub contributors](https://img.shields.io/github/contributors/singhpri30/Good-Readme-Generator)](https://github.com/singhpri30/Good-Readme-Generator/graphs/contributors/) 
 
-  >### Contributors: sdssdsd
+  ### Contributors: Priyanka Singh
 
-  >### Tests: ssd
+  ### Tests: yes
 
-  >### Questions: sd
+  ### Questions: priyankasingh30@gmail.com
   
   
